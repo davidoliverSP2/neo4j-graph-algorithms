@@ -219,7 +219,6 @@ public final class HugeGraphFactory extends GraphFactory {
         private final int[] relationId;
         private final int weightId;
         private final HugeWeightMapping weights;
-        private final boolean loadsBoth;
         private final boolean undirected;
 
         HugeRelationshipImporter(
@@ -248,7 +247,6 @@ public final class HugeGraphFactory extends GraphFactory {
             this.relationId = relationId;
             this.weightId = weightId;
             this.weights = weights;
-            this.loadsBoth = inAdjacency != null && outAdjacency != null;
             this.undirected = undirected;
         }
 
@@ -353,8 +351,7 @@ public final class HugeGraphFactory extends GraphFactory {
                         direction,
                         readOp,
                         weightId,
-                        weights,
-                        loadsBoth);
+                        weights);
             }
             return new RelationshipDeltaEncoding(idMap, direction);
         }
@@ -454,7 +451,7 @@ public final class HugeGraphFactory extends GraphFactory {
     private static class RelationshipDeltaEncoding implements RelationshipVisitor<EntityNotFoundException> {
 
         private final HugeIdMap idMap;
-        private Direction direction;
+        Direction direction;
 
         private long prevTarget;
         private long prevNode;
@@ -552,7 +549,6 @@ public final class HugeGraphFactory extends GraphFactory {
         private final int weightId;
         private final HugeWeightMap weights;
         private final ReadOperations readOp;
-        private final boolean isBoth;
         private final double defaultValue;
 
         RelationshipDeltaEncodingWithWeights(
@@ -560,11 +556,9 @@ public final class HugeGraphFactory extends GraphFactory {
                 final Direction direction,
                 final ReadOperations readOp,
                 int weightId,
-                HugeWeightMapping weights,
-                boolean isBoth) {
+                HugeWeightMapping weights) {
             super(idMap, direction);
             this.readOp = readOp;
-            this.isBoth = isBoth;
             if (!(weights instanceof HugeWeightMap) || weightId < 0) {
                 throw new IllegalArgumentException(
                         "expected weights to be defined");
@@ -584,14 +578,12 @@ public final class HugeGraphFactory extends GraphFactory {
                         relationshipId,
                         weightId);
                 double doubleVal = RawValues.extractValue(value, defaultValue);
-                if (doubleVal != defaultValue) {
-                    long source = sourceGraphId;
-                    long target = targetGraphId;
-                    if (isBoth && source > target) {
-                        target = source;
-                        source = targetGraphId;
+                if (Double.compare(doubleVal, defaultValue) != 0) {
+                    if (direction == Direction.OUTGOING) {
+                        weights.put(sourceGraphId, targetGraphId, value);
+                    } else {
+                        weights.put(targetGraphId, sourceGraphId, value);
                     }
-                    weights.put(source, target, doubleVal);
                 }
             }
             return targetGraphId;
