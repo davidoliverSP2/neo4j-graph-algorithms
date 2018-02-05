@@ -168,8 +168,8 @@ final class RelationshipImporter extends StatementTask<Void, EntityNotFoundExcep
         final VisitRelationship visitorIn;
         final VisitRelationship visitorOut;
         if (relWeights instanceof WeightMap) {
-            visitorIn = new VisitIncomingWithWeight(readOp, idMap, true, (WeightMap) this.relWeights);
-            visitorOut = new VisitOutgoingWithWeight(readOp, idMap, true, (WeightMap) this.relWeights);
+            visitorIn = new VisitIncomingNoWeight(idMap, true);
+            visitorOut = new VisitUndirectedOutgoingWithWeight(readOp, idMap, true, (WeightMap) this.relWeights);
         } else {
             visitorIn = new VisitIncomingNoWeight(idMap, true);
             visitorOut = new VisitOutgoingNoWeight(idMap, true);

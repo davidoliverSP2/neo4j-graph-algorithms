@@ -98,6 +98,32 @@ abstract class VisitRelationship implements RelationshipVisitor<EntityNotFoundEx
         weights.put(relId, doubleValue);
     }
 
+    static void visitUndirectedWeight(
+            ReadOperations readOp,
+            int sourceGraphId,
+            int targetGraphId,
+            WeightMap weights,
+            long relationshipId) {
+        Object value;
+        try {
+            value = readOp.relationshipGetProperty(relationshipId, weights.propertyId());
+        } catch (EntityNotFoundException ignored) {
+            return;
+        }
+        if (value == null) {
+            return;
+        }
+        double defaultValue = weights.defaultValue();
+        double doubleValue = RawValues.extractValue(value, defaultValue);
+        if (Double.compare(doubleValue, defaultValue) == 0) {
+            return;
+        }
+        long relId = RawValues.combineIntInt(sourceGraphId, targetGraphId);
+        weights.put(relId, doubleValue);
+        relId = RawValues.combineIntInt(targetGraphId, sourceGraphId);
+        weights.put(relId, doubleValue);
+    }
+
     private static int checkDistinct(final int[] values, final int len) {
         int prev = -1;
         for (int i = 0; i < len; i++) {
@@ -190,6 +216,29 @@ final class VisitIncomingWithWeight extends VisitRelationship {
     public void visit(final long relationshipId, final int typeId, final long startNodeId, final long endNodeId) {
         if (addNode(startNodeId)) {
             visitWeight(readOp, prevTarget, sourceGraphId, weights, relationshipId);
+        }
+    }
+}
+
+final class VisitUndirectedOutgoingWithWeight extends VisitRelationship {
+
+    private final ReadOperations readOp;
+    private final WeightMap weights;
+
+    VisitUndirectedOutgoingWithWeight(
+            final ReadOperations readOp,
+            final IdMap idMap,
+            final boolean shouldSort,
+            final WeightMap weights) {
+        super(idMap, shouldSort);
+        this.readOp = readOp;
+        this.weights = weights;
+    }
+
+    @Override
+    public void visit(final long relationshipId, final int typeId, final long startNodeId, final long endNodeId) {
+        if (addNode(endNodeId)) {
+            visitUndirectedWeight(readOp, sourceGraphId, prevTarget, weights, relationshipId);
         }
     }
 }
