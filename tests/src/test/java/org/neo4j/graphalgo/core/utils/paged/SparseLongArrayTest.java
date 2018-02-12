@@ -16,7 +16,7 @@ import static org.junit.Assert.fail;
 public final class SparseLongArrayTest extends RandomizedTest {
 
     private static final int PS = PageUtil.pageSizeFor(Long.BYTES);
-    private static final MethodHandle PAGES = PrivateLookup.field(SparseLongArray.class, Object[].class, "pages");
+    private static final MethodHandle PAGES = PrivateLookup.field(SparseLongArray.class, long[][].class, "pages");
 
     @Test
     public void shouldSetAndGet() {
