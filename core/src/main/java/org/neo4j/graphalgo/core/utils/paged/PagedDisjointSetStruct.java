@@ -29,24 +29,19 @@ import java.util.stream.Stream;
 
 public final class PagedDisjointSetStruct {
 
-    private final LongArray parent;
-    private final LongArray depth;
+    private final FixedLongArray parent;
+    private final FixedLongArray depth;
     private final long capacity;
 
     public PagedDisjointSetStruct(long capacity, AllocationTracker tracker) {
-        parent = LongArray.newArray(capacity, tracker);
-        depth = LongArray.newArray(capacity, tracker);
+        parent = FixedLongArray.newArray(capacity, tracker);
+        depth = FixedLongArray.newArray(capacity, tracker);
         this.capacity = capacity;
     }
 
     public PagedDisjointSetStruct reset() {
         parent.fill(-1);
         return this;
-    }
-
-    public static long estimateSize(long capacity) {
-        return LongArray.estimateMemoryUsage(capacity) * 2
-                + MemoryUsage.shallowSizeOfInstance(PagedDisjointSetStruct.class);
     }
 
     public boolean connected(long p, long q) {
@@ -95,7 +90,7 @@ public final class PagedDisjointSetStruct {
             throw new IllegalArgumentException("Different Capacity");
         }
 
-        LongArray.Cursor others = other.parent.cursor(0, other.parent.newCursor());
+        FixedLongArray.Cursor others = other.parent.cursor(0, other.parent.newCursor());
         long i = 0L;
         while (others.next()) {
             long[] array = others.array;

@@ -28,7 +28,7 @@ import org.neo4j.graphalgo.api.HugeGraph;
 import org.neo4j.graphalgo.core.GraphLoader;
 import org.neo4j.graphalgo.core.huge.HugeGraphFactory;
 import org.neo4j.graphalgo.core.utils.paged.AllocationTracker;
-import org.neo4j.graphalgo.core.utils.paged.LongArray;
+import org.neo4j.graphalgo.core.utils.paged.FixedLongArray;
 import org.neo4j.graphalgo.impl.scc.HugeSCCIterativeTarjan;
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.Transaction;
@@ -120,7 +120,7 @@ public class HugeSCCTest {
                 .getConnectedComponents());
     }
 
-    private void assertCC(LongArray connectedComponents) {
+    private void assertCC(FixedLongArray connectedComponents) {
         assertBelongSameSet(connectedComponents,
                 getMappedNodeId("a"),
                 getMappedNodeId("b"),
@@ -135,7 +135,7 @@ public class HugeSCCTest {
                 getMappedNodeId("i"));
     }
 
-    private static void assertBelongSameSet(LongArray data, Integer... expected) {
+    private static void assertBelongSameSet(FixedLongArray data, Integer... expected) {
         // check if all belong to same set
         final long needle = data.get(expected[0]);
         for (int i : expected) {
