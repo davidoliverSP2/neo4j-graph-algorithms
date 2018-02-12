@@ -36,12 +36,15 @@ public final class SparseLongArrayTest extends RandomizedTest {
     }
 
     // capacity check is only an assert
-    @Test(expected = AssertionError.class)
+    @Test
     public void shouldUseCapacityInPageSizedChunks() {
         SparseLongArray array = SparseLongArray.newArray(10, AllocationTracker.EMPTY);
         // larger than the desired size, but still within a single page
-        array.set(between(PS, 2 * PS - 1), 1337);
-        fail("should have failed out of capacity");
+        try {
+            array.set(between(PS, 2 * PS - 1), 1337);
+            fail("should have failed out of capacity");
+        } catch (AssertionError | ArrayIndexOutOfBoundsException ignore) {
+        }
     }
 
     @Test
