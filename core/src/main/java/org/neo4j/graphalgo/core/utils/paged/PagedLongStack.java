@@ -5,11 +5,11 @@ package org.neo4j.graphalgo.core.utils.paged;
  */
 public class PagedLongStack {
 
-    private final FixedLongArray array;
+    private final HugeLongArray array;
     private long offset;
 
     public PagedLongStack(long size, AllocationTracker tracker) {
-        array = FixedLongArray.newArray(size, tracker);
+        array = HugeLongArray.newArray(size, tracker);
     }
 
     public void clear() {

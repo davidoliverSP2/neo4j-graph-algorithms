@@ -32,7 +32,7 @@ import org.neo4j.graphalgo.core.utils.StatementTask;
 import org.neo4j.graphalgo.core.utils.paged.AllocationTracker;
 import org.neo4j.graphalgo.core.utils.paged.ByteArray;
 import org.neo4j.graphalgo.core.utils.paged.DeltaEncoding;
-import org.neo4j.graphalgo.core.utils.paged.FixedLongArray;
+import org.neo4j.graphalgo.core.utils.paged.HugeLongArray;
 import org.neo4j.graphdb.Direction;
 import org.neo4j.helpers.Exceptions;
 import org.neo4j.kernel.api.ReadOperations;
@@ -94,22 +94,22 @@ public final class HugeGraphFactory extends GraphFactory {
         final int[] relationId = dimensions.relationId();
         final int weightId = dimensions.weightId();
 
-        FixedLongArray inOffsets = null;
-        FixedLongArray outOffsets = null;
+        HugeLongArray inOffsets = null;
+        HugeLongArray outOffsets = null;
         ByteArray inAdjacency = null;
         ByteArray outAdjacency = null;
         if (setup.loadIncoming) {
-            inOffsets = FixedLongArray.newArray(nodeCount, tracker);
+            inOffsets = HugeLongArray.newArray(nodeCount, tracker);
             inAdjacency = ByteArray.newArray(0, tracker);
         }
         if (setup.loadOutgoing) {
-            outOffsets = FixedLongArray.newArray(nodeCount, tracker);
+            outOffsets = HugeLongArray.newArray(nodeCount, tracker);
             outAdjacency = ByteArray.newArray(nodeCount, tracker);
         }
         if (setup.loadIncoming || setup.loadOutgoing) {
             // needs final b/c of reference from lambda
-            final FixedLongArray finalInOffsets = inOffsets;
-            final FixedLongArray finalOutOffsets = outOffsets;
+            final HugeLongArray finalInOffsets = inOffsets;
+            final HugeLongArray finalOutOffsets = outOffsets;
             final ByteArray finalInAdjacency = inAdjacency;
             final ByteArray finalOutAdjacency = outAdjacency;
 
@@ -155,7 +155,7 @@ public final class HugeGraphFactory extends GraphFactory {
         final int[] relationId = dimensions.relationId();
         final int weightId = dimensions.weightId();
 
-        FixedLongArray offsets = FixedLongArray.newArray(nodeCount, tracker);
+        HugeLongArray offsets = HugeLongArray.newArray(nodeCount, tracker);
         ByteArray adjacency = ByteArray.newArray(0, tracker);
 
         NodeQueue nodes = new NodeQueue(nodeCount);
@@ -212,8 +212,8 @@ public final class HugeGraphFactory extends GraphFactory {
         private final ImportProgress progress;
         private final NodeQueue nodes;
         private final HugeIdMap idMap;
-        private final FixedLongArray inOffsets;
-        private final FixedLongArray outOffsets;
+        private final HugeLongArray inOffsets;
+        private final HugeLongArray outOffsets;
         private final ByteArray.LocalAllocator inAllocator;
         private final ByteArray.LocalAllocator outAllocator;
         private final int[] relationId;
@@ -228,8 +228,8 @@ public final class HugeGraphFactory extends GraphFactory {
                 NodeQueue nodes,
                 ImportProgress progress,
                 HugeIdMap idMap,
-                FixedLongArray inOffsets,
-                FixedLongArray outOffsets,
+                HugeLongArray inOffsets,
+                HugeLongArray outOffsets,
                 ByteArray inAdjacency,
                 ByteArray outAdjacency,
                 boolean undirected,
@@ -364,7 +364,7 @@ public final class HugeGraphFactory extends GraphFactory {
                 long sourceNodeId,
                 ReadOperations readOp,
                 Direction direction,
-                FixedLongArray offsets,
+                HugeLongArray offsets,
                 ByteArray.LocalAllocator allocator,
                 RelationshipDeltaEncoding delta) throws EntityNotFoundException {
 
@@ -400,7 +400,7 @@ public final class HugeGraphFactory extends GraphFactory {
                 long sourceGraphId,
                 long sourceNodeId,
                 ReadOperations readOp,
-                FixedLongArray offsets,
+                HugeLongArray offsets,
                 ByteArray.LocalAllocator allocator,
                 RelationshipDeltaEncoding delta) throws EntityNotFoundException {
 

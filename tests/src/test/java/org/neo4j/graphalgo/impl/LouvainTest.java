@@ -20,8 +20,6 @@ package org.neo4j.graphalgo.impl;
 
 import com.carrotsearch.hppc.IntHashSet;
 import com.carrotsearch.hppc.IntSet;
-import com.carrotsearch.hppc.LongHashSet;
-import com.carrotsearch.hppc.LongSet;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
@@ -35,7 +33,7 @@ import org.neo4j.graphalgo.core.GraphLoader;
 import org.neo4j.graphalgo.core.huge.HugeGraphFactory;
 import org.neo4j.graphalgo.core.utils.Pools;
 import org.neo4j.graphalgo.core.utils.paged.AllocationTracker;
-import org.neo4j.graphalgo.core.utils.paged.FixedLongArray;
+import org.neo4j.graphalgo.core.utils.paged.HugeLongArray;
 import org.neo4j.graphalgo.impl.louvain.HugeParallelLouvain;
 import org.neo4j.graphalgo.impl.louvain.LouvainAlgorithm;
 import org.neo4j.graphalgo.impl.louvain.WeightedLouvain;
@@ -232,8 +230,8 @@ public class LouvainTest {
     }
 
     public static int[] toIntArray(Object communityIds) {
-        if (communityIds instanceof FixedLongArray) {
-            final FixedLongArray array = (FixedLongArray) communityIds;
+        if (communityIds instanceof HugeLongArray) {
+            final HugeLongArray array = (HugeLongArray) communityIds;
             final long size = array.size();
             final int[] data = new int[Math.toIntExact(size)];
             for (int i = 0; i < size; i++) {

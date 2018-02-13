@@ -29,13 +29,13 @@ import java.util.stream.Stream;
 
 public final class PagedDisjointSetStruct {
 
-    private final FixedLongArray parent;
-    private final FixedLongArray depth;
+    private final HugeLongArray parent;
+    private final HugeLongArray depth;
     private final long capacity;
 
     public PagedDisjointSetStruct(long capacity, AllocationTracker tracker) {
-        parent = FixedLongArray.newArray(capacity, tracker);
-        depth = FixedLongArray.newArray(capacity, tracker);
+        parent = HugeLongArray.newArray(capacity, tracker);
+        depth = HugeLongArray.newArray(capacity, tracker);
         this.capacity = capacity;
     }
 
@@ -90,7 +90,7 @@ public final class PagedDisjointSetStruct {
             throw new IllegalArgumentException("Different Capacity");
         }
 
-        FixedLongArray.Cursor others = other.parent.cursor(0, other.parent.newCursor());
+        HugeLongArray.Cursor others = other.parent.cursor(0, other.parent.newCursor());
         long i = 0L;
         while (others.next()) {
             long[] array = others.array;
