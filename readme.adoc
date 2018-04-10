@@ -52,14 +52,18 @@ Download `graph-algorithms-algo-[version].jar` from https://github.com/neo4j-con
 
 Because the algorithms use the lower level Kernel API to read from, and to write to Neo4j, for security purposes you will also have to enable them in the configuration:
 
-. Add to _$NEO4J_HOME/conf/neo4j.conf_:
+. Add the following to your _$NEO4J_HOME/conf/neo4j.conf_ file:
 +
 ----
-dbms.security.procedures.unrestricted=algo.*
+dbms.security.procedures.unrestricted=algo.<name>
 ----
 +
 . Restart Neo4j
-. To see a list of all the algorithms, execute the query `CALL algo.list()`
+. To see a list of all the algorithms, run the following query:
++
+----
+`CALL algo.list()`
+----
 
 ifndef::env-docs[]
 You can also see the full list in the http://neo4j-contrib.github.io/neo4j-graph-algorithms[documentation^].
