@@ -62,7 +62,7 @@ dbms.security.procedures.unrestricted=algo.<name>
 . To see a list of all the algorithms, run the following query:
 +
 ----
-`CALL algo.list()`
+CALL algo.list()
 ----
 
 ifndef::env-docs[]
