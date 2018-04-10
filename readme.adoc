@@ -52,7 +52,7 @@ Download `graph-algorithms-algo-[version].jar` from https://github.com/neo4j-con
 
 Because the algorithms use the lower level Kernel API to read from, and to write to Neo4j, for security purposes you will also have to enable them in the configuration:
 
-. Add to $NEO4J_HOME/conf/neo4j.conf
+. Add to _$NEO4J_HOME/conf/neo4j.conf_:
 +
 ----
 dbms.security.procedures.unrestricted=algo.*
@@ -85,16 +85,16 @@ The World Wide Web is a virtual network of information.
 == Usage
 
 These algorithms are exposed as Neo4j procedures.
-We can call them directly from Cypher in your Neo4j Browser, from cypher-shell, or your client code.
+We can call them directly from Cypher in your Neo4j Browser, from cypher-shell, or from your client code.
 
 For most algorithms we provide two procedures:
 
-* `algo.<name>` - this procedure writes results back to the graph as node-properties and reports statistics.
+* `algo.<name>` - this procedure writes results back to the graph as node-properties, and reports statistics.
 * `algo.<name>.stream` - this procedure returns a stream of data.
 For example, node-ids and computed values.
 
 For large graphs, the streaming procedure might return millions, or even billions of results.
-That is why it is often more convenient to store the results of the algorithm, and then use them with later queries.
+That is why it can be more convenient to store the results of the algorithm, and then use them with later queries.
 
 We can project the graph we want to run algorithms on with either label and relationship-type projection, or cypher projection.
 
