@@ -59,7 +59,7 @@ dbms.security.procedures.unrestricted=algo.*
 ----
 +
 . Restart Neo4j
-. To see a list of all the algorithms, execute the query `CALL algo.list()`.
+. To see a list of all the algorithms, execute the query `CALL algo.list()`
 
 ifndef::env-docs[]
 You can also see the full list in the http://neo4j-contrib.github.io/neo4j-graph-algorithms[documentation^].
@@ -89,8 +89,8 @@ We can call them directly from Cypher in your Neo4j Browser, from cypher-shell, 
 
 For most algorithms we provide two procedures:
 
-* one named `algo.<name>` that writes results back to the graph as node-properties and reports statistics.
-* another named `algo.<name>.stream` that returns a stream of data.
+* `algo.<name>` - this procedure writes results back to the graph as node-properties and reports statistics.
+* `algo.<name>.stream` - this procedure returns a stream of data.
 For example, node-ids and computed values.
 
 For large graphs, the streaming procedure might return millions, or even billions of results.
