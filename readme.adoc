@@ -24,7 +24,7 @@ These algorithms determine the importance of distinct nodes in a network.
 * Betweenness Centrality (`algo.betweenness`)
 * Closeness Centrality (`algo.closeness`)
 
-=== Community Detection
+=== Community detection
 
 These algorithms evaluate how a group is clustered or partitioned, as well as its tendency to strengthen or break apart.
 
@@ -34,7 +34,7 @@ These algorithms evaluate how a group is clustered or partitioned, as well as it
 * Strongly Connected Components (`algo.scc`)
 * Triangle Count / Clustering Coefficient (`algo.triangleCount`)
 
-=== Path Finding
+=== Path finding
 
 These algorithms help find the shortest path or evaluate the availability and quality of routes.
 
@@ -174,7 +174,7 @@ ifndef::env-docs[]
 The detailed call syntax and all parameters and possible return values for each algorithm are listed in the http://neo4j-contrib.github.io/neo4j-graph-algorithms[project's documentation]
 endif::env-docs[]
 
-== Graph Loading
+== Graph loading
 
 As it can take some time to load large graphs into the algorithm data structures, you can pre-load graphs and then later refer to them by name for several graph algorithms.
 After usage they can be removed from memory to free resources used.
@@ -199,7 +199,7 @@ CALL algo.graph.remove('my-graph')
   YIELD name, type, exists, removed, nodes;
 ----
 
-== Building Locally
+== Building locally
 
 Currently aiming at Neo4j 3.x (with a branch per version)
 
