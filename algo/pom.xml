@@ -104,7 +104,7 @@
                         <arg>-AIgnoreContextWarnings</arg>
                         <arg>-AGeneratedDocumentationPath=target/generated-documentation</arg>
                         <arg>-ADocumentation.FieldDelimiter=¦</arg>
-                        <arg>-ADocumentation.ExportedHeaders=Qualified name¦Description</arg>
+                        <arg>-ADocumentation.ExportedHeaders=qualified name¦description</arg>
                         <arg>-ADocumentation.QuotedFields=false</arg>
                         <arg>-ADocumentation.DelimitedFirstField=true</arg>
                         <arg>-ADocumentation.ExportGrouping=PACKAGE</arg>
