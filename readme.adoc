@@ -20,7 +20,7 @@ Releases are available here: https://github.com/neo4j-contrib/neo4j-graph-algori
 
 These algorithms determine the importance of distinct nodes in a network:
 
-* Page Rank (`algo.pageRank`)
+* PageRank (`algo.pageRank`)
 * Betweenness Centrality (`algo.betweenness`)
 * Closeness Centrality (`algo.closeness`)
 
