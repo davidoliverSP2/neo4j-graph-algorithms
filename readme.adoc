@@ -129,7 +129,7 @@ During projection, only one relationship between a pair of nodes per direction (
 
 === Label and relationship-type projection
 
-We can project the subgraph we want to run the algorithm on, using the label parameter to describe nodes, and relationship-type to describe relationships.
+We can project the subgraph we want to run the algorithm on by using the label parameter to describe nodes, and relationship-type to describe relationships.
 
 The general call syntax is:
 
@@ -138,7 +138,7 @@ The general call syntax is:
 CALL algo.<name>([label],[relationshipType],{config})
 ----
 
-For example, Page Rank on DBpedia (11M nodes, 116M relationships):
+For example, PageRank on DBpedia (11M nodes, 116M relationships):
 
 [source,cypher]
 ----
