@@ -60,7 +60,7 @@ Study mentioned is https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2784301/[Hierarc
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Louvain algorithm
 
 // tag::constraint[]
 Although the _Louvain_ Method, and modularity optimization algorithms more generally, have found wide application across many domains, some problems with these algorithms have been identified.

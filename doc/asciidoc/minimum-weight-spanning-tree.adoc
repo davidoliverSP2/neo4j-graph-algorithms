@@ -39,7 +39,7 @@ Read more in the https://www.ncbi.nlm.nih.gov/pmc/articles/PMC516344/[Use of the
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Minimum Weight Spanning Tree algorithm
 
 // tag::constraint[]
 The MST algorithm only gives meaningful results when run on a graph where the relationships have different weights.

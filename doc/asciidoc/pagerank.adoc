@@ -56,7 +56,7 @@ It can help find doctors or providers that are behaving in an unusual manner and
 There are many more use cases which you can read about in David Gleich's https://arxiv.org/pdf/1407.5107.pdf[PageRank beyond the web^]
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the PageRank algorithm
 
 // tag::constraint[]
 There are some things to be aware of when using the Page Rank algorithm.

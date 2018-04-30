@@ -42,7 +42,7 @@ Impact of a Focal User]
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Betweenness Centrality algorithm
 
 // tag::constraint[]
 Betweeness centrality makes the assumption that all communication between nodes happens along the shortest path and with the same frequency, which isn't the case in real life.

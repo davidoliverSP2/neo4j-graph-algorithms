@@ -28,7 +28,7 @@ In our implementation geospatial distance is used as heurestic.
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the A* algorithm
 
 // tag::constraint[]
 

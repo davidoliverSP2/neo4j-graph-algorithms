@@ -36,7 +36,7 @@ For example, we might use it if we're trying to identify where in the city to pl
 If we're trying to spread a message on social media we could use the algorithm to find the key influencers that can help us achieve our goal.
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Harmonic Centrality algorithm
 
 // tag::constraint[]
 

@@ -46,7 +46,7 @@ This process is described by Florian Boudin in https://www.aclweb.org/anthology/
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Closeness Centrality algorithm
 
 // tag::constraint[]
 Academically closeness centrality works best on connected graphs.

@@ -36,7 +36,7 @@ Find more in http://www.pnas.org/content/99/9/5825[Curvature of co-links uncover
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Triangle Counting / Clustering Coefficient algorithm
 
 // tag::constraint[]
 

@@ -32,7 +32,7 @@ It uses Dijkstra's algorithm to help detect changes in topology, such as link fa
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Single Source Shortest Path algorithm
 
 // tag::constraint[]
 Dijkstra does not support negative weights.

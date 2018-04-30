@@ -30,7 +30,7 @@ Read more in https://link.springer.com/chapter/10.1007/978-3-319-23461-8_11[Two 
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the Degree Centrality algorithm
 
 
 // tag::constraint[]

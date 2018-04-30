@@ -28,7 +28,7 @@ There are more details about this approach in https://cs.uwaterloo.ca/research/t
 
 // end::use-case[]
 
-== Constraints / when not to use it
+== Constraints - when not to use the All Pairs Shortest Path algorithm
 
 // tag::constraint[]
 

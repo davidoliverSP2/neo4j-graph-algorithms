@@ -31,7 +31,7 @@ Read more in https://pdfs.semanticscholar.org/a8e0/5f803312032569688005acadaa4d4
 // end::use-case[]
 
 
-== Constraints / when not to use it
+== Constraints - when not to use the Connected Components algorithm
 
 // tag::constraint[]
 
