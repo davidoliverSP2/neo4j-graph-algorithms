@@ -39,7 +39,7 @@ Dijkstra does not support negative weights.
 The algorithm assumes that adding a relationship to a path can never make a path shorter - an invariant that would be violated with negative weights.
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Single Source Shortest Path algorithm sample
 
 image::sssp.png[]
 

@@ -38,7 +38,7 @@ Read more in https://link.springer.com/chapter/10.1007/978-3-319-23461-8_11[Two 
 
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Degree Centrality algorithm sample
 
 .Create sample graph
 [source,cypher]

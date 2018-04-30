@@ -35,7 +35,7 @@ There are more details about this approach in https://cs.uwaterloo.ca/research/t
 // end::constraint[]
 
 
-== Algorithm explanation on simple sample graph
+== All Pairs Shortest Path algorithm sample
 
 image::sssp.png[]
 

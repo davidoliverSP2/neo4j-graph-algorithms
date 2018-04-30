@@ -37,7 +37,7 @@ Read more in https://pdfs.semanticscholar.org/a8e0/5f803312032569688005acadaa4d4
 
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Connected Components algorithm sample
 
 Recall that an undirected graph is connected if for every pair of vertices, there is a path in the graph between those vertices.
 A connected component of an undirected graph is a maximal connected subgraph of the graph.

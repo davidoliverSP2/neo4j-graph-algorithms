@@ -34,7 +34,7 @@ In our implementation geospatial distance is used as heurestic.
 
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== A* algorithm sample
 
 .Create sample graph
 [source,cypher]

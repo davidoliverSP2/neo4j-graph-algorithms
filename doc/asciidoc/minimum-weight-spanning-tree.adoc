@@ -46,7 +46,7 @@ The MST algorithm only gives meaningful results when run on a graph where the re
 If the graph has no weights or all relationships have the same weight then any spanning tree is a minimum spanning tree.
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Minimum Weight Spanning Tree algorithm sample
 
 image::mst.png[]
 

@@ -49,7 +49,7 @@ The range of solutions can be narrowed if some nodes are given preliminary label
 Unlabelled nodes will be more likely to adapt the preliminary labels.
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Label Propagation algorithm sample
 
 image::label_propagation.png[]
 

@@ -42,7 +42,7 @@ Find more in http://www.pnas.org/content/99/9/5825[Curvature of co-links uncover
 
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Triangle Counting / Clustering Coefficient algorithm sample
 
 image::triangle_count.png[]
 

@@ -79,7 +79,7 @@ This can be a severe problem because, in the presence of a large number of high 
 https://arxiv.org/abs/0910.0165[Research] undertaken at Universite Catholique de Louvain showed that the different locally optimal community assignments can have quite different structural properties.[3]
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Louvain algorithm sample
 
 image::louvain.png[]
 

@@ -56,7 +56,7 @@ This means that we'll end up with an infinite closeness centrality score when we
 In practice, a variation on the original formula is used so that we don't run into these issues.
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Closeness Centrality algorithm sample
 
 image::closeness_centrality.png[]
 

@@ -42,7 +42,7 @@ If we're trying to spread a message on social media we could use the algorithm t
 
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Harmonic Centrality algorithm sample
 
 // image::harmonic_centrality.png[]
 

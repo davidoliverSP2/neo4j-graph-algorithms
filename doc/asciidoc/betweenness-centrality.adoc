@@ -53,7 +53,7 @@ The fastest known algorithm for exactly computing betweenness of all the nodes r
 Instead we can use an approximation algorithm that works with a subset of nodes.
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Betweenness Centrality algorithm sample
 
 People with high betweenness tend to be the innovators and brokers in social networks.
 They combine different perspectives, transfer ideas between groups, and get power from their ability to make introductions and pull strings.

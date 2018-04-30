@@ -37,7 +37,7 @@ The SCC algorithms can be used to find such groups and suggest the commonly like
 
 // end::constraint[]
 
-== Algorithm explanation on simple sample graph
+== Strongly Connected Components algorithm sample
 
 image::strongly_connected_components.png[]
 
