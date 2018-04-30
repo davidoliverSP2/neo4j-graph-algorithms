@@ -30,7 +30,7 @@ The formula for *normalized closeness centrality* is as follows:
 `normalized closeness centrality(node) = (number of nodes - 1) / sum(distance from node to all other nodes)`
 // end::formula[]
 
-== When to use it / use-cases
+== Use-cases - when to use the Closeness Centrality algorithm
 
 // tag::use-case[]
 
@@ -188,7 +188,7 @@ YIELD nodeId, centrality - yields centrality for each node
 |===
 
 == Huge graph projection
- 
+
 If our projected graph contains more than 2 billion nodes or relationships, we need to use huge graph projection, as the default label and relationship-type projection has a limitation of 2 billion nodes and 2 billion relationships.
 Set `graph:'huge'` in the config.
 

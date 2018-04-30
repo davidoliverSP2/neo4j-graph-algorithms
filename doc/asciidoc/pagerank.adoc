@@ -36,7 +36,7 @@ where
 The PageRanks form a probability distribution over web pages, which means that the sum of all web pages' PageRanks will be one.
 // end::formula[]
 
-== When to use it / use-cases
+== Use-cases - when to use the PageRank algorithm
 
 // tag::use-case[]
 PageRank can be applied across a wide range of domains.
@@ -205,7 +205,7 @@ YIELD node, score - calculates page rank and streams results
 |===
 
 == Huge graph projection
- 
+
 If our projected graph contains more than 2 billion nodes or relationships, we need to use huge graph projection, as the default label and relationship-type projection has a limitation of 2 billion nodes and 2 billion relationships.
 Set `graph:'huge'` in the config.
 

@@ -16,7 +16,7 @@ While the algorithm can be used to find the popularity of individual nodes, it i
 // end::explanation[]
 
 
-== When to use it / use-cases
+== Use-cases - when to use the Degree Centrality algorithm
 
 
 // tag::use-case[]

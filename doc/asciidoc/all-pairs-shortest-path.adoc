@@ -15,7 +15,7 @@ In this scenario the algorithm will return `Infinity` value as a result between 
 
 Plain cypher does not support filtering `Infinity` values, so `algo.isFinite` function was added to help filter `Infinity` values from results.
 
-== When to use it / use-cases
+== Use-cases - when to use the All Pairs Shortest Path algorithm
 
 // tag::use-case[]
 
@@ -90,7 +90,7 @@ include::scripts/single-shortest-path.cypher[tag=all-pairs-bidirected-graph]
 ----
 
 == Huge graph projection
- 
+
 If our projected graph contains more than 2 billion nodes or relationships, we need to use huge graph projection, as the default label and relationship-type projection has a limitation of 2 billion nodes and 2 billion relationships.
 Set `graph:'huge'` in the config.
 

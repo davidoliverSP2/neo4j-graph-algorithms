@@ -27,7 +27,7 @@ As with closeness centrality we can also calculate a *normalized harmonic centra
 In this formula ∞ values are handled cleanly.
 // end::formula[]
 
-== When to use it / use-cases
+== Use-cases - when to use the Harmonic Centrality algorithm
 
 // tag::use-case[]
 Harmonic centrality was proposed as an alternative to closeness centrality, and therefore has similar use cases.
@@ -158,7 +158,7 @@ YIELD nodeId, centrality - yields centrality for each node
 |===
 
 == Huge graph projection
- 
+
 If our projected graph contains more than 2 billion nodes or relationships, we need to use huge graph projection, as the default label and relationship-type projection has a limitation of 2 billion nodes and 2 billion relationships.
 Set `graph:'huge'` in the config.
 

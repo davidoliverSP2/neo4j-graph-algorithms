@@ -22,7 +22,7 @@ The algorithm was given its first formal definition by Linton Freeman in his 197
 It was considered to be one of the "three distinct intuitive conceptions of centrality".
 // end::explanation[]
 
-== When to use it / use-cases
+== Use-cases - when to use the Betweenness Centrality algorithm
 
 // tag::use-case[]
 
@@ -37,7 +37,7 @@ More detail can be found in http://archives.cerium.ca/IMG/pdf/Morselli_and_Roy_2
 
 * Betweenness centrality can be used to help micro bloggers spread their reach on Twitter network with a recommendation engine that targets influencers they should interact with in future.
 This approach is described in ftp://ftp.umiacs.umd.edu/incoming/louiqa/PUB2012/RecMB.pdf[Making Recommendations in a Microblog to Improve the
-Impact of a Focal User] 
+Impact of a Focal User]
 
 
 // end::use-case[]
@@ -80,13 +80,13 @@ include::scripts/betweenness-centrality.cypher[tag=write-sample-graph]
 .Results
 [opts="header",cols="1,1"]
 |===
-| name | centrality weight 
+| name | centrality weight
 | Alice | 4
 | Charles | 2
 | Bridget | 0
 | Michael | 0
 | Doug | 0
-| Mark | 0 
+| Mark | 0
 |===
 // end::stream-sample-graph-result[]
 
@@ -108,7 +108,7 @@ Set `graph:'cypher'` in the config.
 include::scripts/betweenness-centrality.cypher[tag=cypher-loading]
 ----
 
-== Versions 
+== Versions
 
 We support the following versions of the betweenness centrality algorithm:
 
@@ -123,7 +123,7 @@ We support the following versions of the betweenness centrality algorithm:
 
 ** direction:'both' or '<>'
 
-* [ ] undirected, weighted 
+* [ ] undirected, weighted
 
 == Implementations
 
@@ -139,7 +139,7 @@ We support the following versions of the betweenness centrality algorithm:
 - brandes-like algorithm which uses successor sets instead of predecessor sets
 - The algorithm is based on Brandes definition but with some changes
  regarding the dependency-accumulation step.
-- Does not support undirected graph 
+- Does not support undirected graph
 
 `algo.betweenness.sampled()`
 
@@ -147,7 +147,7 @@ We support the following versions of the betweenness centrality algorithm:
 
 - random selection(default): strategy:'random': (takes optional argument probability:double(0-1) or log10(N) / e^2 as default)
 - degree based randomization: strategy:'degree': (makes dense nodes more likely)
-- optional Arguments: maxDepth:int 
+- optional Arguments: maxDepth:int
 
 
 == References
@@ -196,7 +196,7 @@ In graph theory, betweenness centrality is a measure of centrality in a graph ba
 - [x] implement procedure
 - [x] tests
 - [x] relationship case tests
-- [x] simple benchmark 
+- [x] simple benchmark
 - [x] benchmark on bigger graphs
 - [x] parallelization
 - [x] evaluation
@@ -226,7 +226,7 @@ In graph theory, betweenness centrality is a measure of centrality in a graph ba
 
 - random selection(default): strategy:'random': (takes optional argument probability:double(0-1) or log10(N) / e^2 as default)
 - degree based randomization: strategy:'degree': (makes dense nodes more likely)
-- optional Arguments: maxDepth:int 
+- optional Arguments: maxDepth:int
 
 
 // end::implementation[]
