@@ -230,7 +230,7 @@ We support the following versions of the label propagation algorithms:
 ifdef::implementation[]
 // tag::implementation[]
 
-== Implementation Details
+== Implementation details
 
 :leveloffset: +1
 // copied from: https://github.com/neo4j-contrib/neo4j-graph-algorithms/issues/95

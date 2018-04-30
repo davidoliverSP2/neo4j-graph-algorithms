@@ -118,7 +118,7 @@ ifdef::implementation[]
 * [2] https://cs.uwaterloo.ca/research/tr/2011/CS-2011-21.pdf[REWIRE: An optimization-based framework for unstructured data center network design^] - Andrew R. Curtis, Tommy Carpenter, Mustafa Elsheikh, Alejandro López-Ortiz, S. Keshav
 // end::references[]
 
-== Implementation Details
+== Implementation details
 
 :leveloffset: +1
 

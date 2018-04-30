@@ -204,7 +204,7 @@ We support the following versions of the harmonic centrality algorithm:
 ifdef::implementation[]
 // tag::implementation[]
 
-== Implementation Details
+== Implementation details
 
 ...
 

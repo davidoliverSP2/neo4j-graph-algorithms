@@ -267,7 +267,7 @@ We support the following versions of the pageRank algorithm:
 ifdef::implementation[]
 // tag::implementation[]
 
-== Implementation Details
+== Implementation details
 
 // copied from: https://github.com/neo4j-contrib/neo4j-graph-algorithms/issues/78
 

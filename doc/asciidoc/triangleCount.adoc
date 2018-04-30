@@ -256,7 +256,7 @@ ifdef::implementation[]
 // tag::implementation[]
 
 
-== Implementation Details
+== Implementation details
 
 :leveloffset: +1
 

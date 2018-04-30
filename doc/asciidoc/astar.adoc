@@ -141,7 +141,7 @@ We support the following versions of the shortest path algorithms:
 ifdef::implementation[]
 // tag::implementation[]
 
-== Implementation Details
+== Implementation details
 
 :leveloffset: +1
 
