@@ -9,7 +9,7 @@ The _Louvain_ algorithm is one of the fastest modularity based algorithms and wo
 It also reveals a hierarchy of communities at different scales, which can be useful for understanding the global functioning of a network.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 The https://arxiv.org/pdf/0803.0476.pdf[Louvain algorithm^] was proposed in 2008 by authors from the University of Louvain.

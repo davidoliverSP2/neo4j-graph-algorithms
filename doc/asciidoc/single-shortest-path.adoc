@@ -6,7 +6,7 @@ Dijkstra's algorithm is the most well known one in this category.
 SSSP is a real time graph algorithm and can be used as part of the normal user flow in a web or mobile application.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 Path finding has a long history and is considered to be one of the classical graph problems - it has been researched as far back as the 19th century.

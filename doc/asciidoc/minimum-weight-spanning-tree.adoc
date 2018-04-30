@@ -6,7 +6,7 @@ _Prim's algorithm_ is one of the simplest and best-known minimum spanning tree a
 The K-Means variant of this algorithm can be used to detect clusters in the graph.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 The first known algorithm for finding a minimum spanning tree was developed by the Czech scientist Otakar Borůvka in 1926, while trying to find an efficient electricity network for Moravia.

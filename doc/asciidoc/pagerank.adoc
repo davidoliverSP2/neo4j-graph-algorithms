@@ -12,7 +12,7 @@ More influential nodes will be visited more often.
 
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 PageRank is named after Google co-founder Larry Page and is used to rank websites in Google's search results.

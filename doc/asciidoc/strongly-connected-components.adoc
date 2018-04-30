@@ -5,7 +5,7 @@ The _Strongly Connected Components_ (SCC) algorithm finds sets of connected node
 It is often used early in a graph analysis process to help us get an idea of how our graph is structured.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 SCC is one of the earliest graph algorithms and the first linear-time algorithm was described by Tarjan in 1972.

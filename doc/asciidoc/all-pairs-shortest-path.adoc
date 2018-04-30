@@ -6,7 +6,7 @@ This algorithm has optimisations that make it quicker than calling the SSSP algo
 
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 Some pairs of nodes might not be reachable between each other, so no shortest path exist between these pairs of nodes.

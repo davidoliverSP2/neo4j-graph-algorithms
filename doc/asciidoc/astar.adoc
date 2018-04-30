@@ -7,7 +7,7 @@ It  is  based  on  the  observation  that  some  searches  are informed, and  th
 
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 

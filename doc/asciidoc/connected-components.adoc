@@ -6,7 +6,7 @@ It differs from the SCC algorithm because it only needs a path to exist between 
 As with SCC, UnionFind is often used early in an analysis to understand a graph's structure.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 The algorithm was first described by Bernard A. Galler and Michael J. Fischer in 1964.

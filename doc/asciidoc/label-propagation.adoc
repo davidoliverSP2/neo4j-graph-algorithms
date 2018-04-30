@@ -8,7 +8,7 @@ One interesting feature of LPA is that we can give nodes preliminary labels to n
 This means that it can be used as semi-supervised way of finding communities where we hand-pick some initial communities.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 LPA is a relatively new algorithm and was only proposed by https://arxiv.org/pdf/0709.2938.pdf[Raghavan et al.^] in 2007.

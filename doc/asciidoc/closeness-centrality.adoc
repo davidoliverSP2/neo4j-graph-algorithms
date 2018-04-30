@@ -7,7 +7,7 @@ The _Closeness Centrality_ of a node measures its average distance to all other 
 Nodes with a high closeness score have the shortest distances to all other nodes.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 For each node the algorithm calculates the sum of its distances to all other nodes based on calculating shortest paths between all pairs of nodes.

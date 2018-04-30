@@ -5,7 +5,7 @@ Triangle counting is a community detection graph algorithm that is used to deter
 A triangle is a set of three nodes where each node has a relationship to all other nodes.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 

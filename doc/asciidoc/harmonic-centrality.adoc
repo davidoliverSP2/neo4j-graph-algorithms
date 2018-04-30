@@ -5,7 +5,7 @@ Harmonic centrality (also known as 'valued centrality') is a variant of closenes
 As with many of the centrality algorithms, it originates from the field of social network analysis.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 Harmonic centrality was proposed by Marchiori and Latora [1] while trying to come up with a sensible notion of "average shortest path".

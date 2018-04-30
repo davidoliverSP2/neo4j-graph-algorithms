@@ -11,7 +11,7 @@ If Alice is removed all connections in the graph would be cut off.
 This makes Alice "important" because she ensures that no nodes are isolated.
 // end::introduction[]
 
-== History, Explanation
+== History and explanation
 
 // tag::explanation[]
 The betweenness centrality algorithm calculates the shortest (weighted) path between every pair of nodes in a connected graph using the breadth-first search algorithm.
