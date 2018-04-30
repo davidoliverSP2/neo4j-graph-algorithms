@@ -97,7 +97,7 @@ include::scripts/single-shortest-path.cypher[tag=delta-stream-sample-graph]
 include::scripts/single-shortest-path.cypher[tag=delta-write-sample-graph]
 ----
 
-== Example Usage
+== Example usage
 
 
 == Syntax

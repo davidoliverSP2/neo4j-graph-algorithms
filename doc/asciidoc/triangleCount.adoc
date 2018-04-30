@@ -105,7 +105,7 @@ include::scripts/triangle-count.cypher[tag=triangle-stream-sample-graph]
 We learn that Michael is part of the most triangles, but it's Karin and Mark who are the best at introducing their friends - all the people who know them know each other!
 // end::triangle-stream-sample-graph-explanation[]
 
-== Example Usage
+== Example usage
 
 In graph theory, a clustering coefficient is a measure of the degree to which nodes in a graph tend to cluster together.
 Evidence suggests that in most real-world networks, and in particular social networks, nodes tend to create tightly knit groups characterised by a relatively high density of ties; this likelihood tends to be greater than the average probability of a tie randomly established between two nodes.[4]

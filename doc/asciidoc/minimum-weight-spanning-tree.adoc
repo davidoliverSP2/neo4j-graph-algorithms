@@ -173,7 +173,7 @@ WHERE count = k
 RETURN n
 ----
 
-== Example Usage
+== Example usage
 
 == Syntax
 

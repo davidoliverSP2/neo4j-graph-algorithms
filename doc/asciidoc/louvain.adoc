@@ -121,7 +121,7 @@ Mark, Doug, and Charles are all friends with each other, as are Bridget, Alice, 
 Charles is the only one who has friends in both communities but he has more in community 4 so he fits better in that one.
 // end::stream-sample-graph-explanation[]
 
-== Example Usage
+== Example usage
 
 
 

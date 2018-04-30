@@ -124,7 +124,7 @@ include::scripts/connected-components.cypher[tag=weighted-write-sample-graph]
 In this case we can see that because the weight of the relationship betwen Bridget and Alice is only 0.5, the relationship is ignored by the algorithm and Bridget ends up in her own component.
 // end::weighted-stream-sample-graph-explanation[]
 
-== Example Usage
+== Example usage
 
 As said Connected Components are an essential step in preprocessing your data.
 One reason is that most centralities suffer from disconnected components or you just want to find disconnected groups of nodes.

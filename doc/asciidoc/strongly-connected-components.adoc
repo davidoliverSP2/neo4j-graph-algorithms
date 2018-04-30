@@ -84,7 +84,7 @@ Charles ends up in his own component becuase there isn't an outgoing relationshi
 ----
 include::scripts/strongly-connected-components.cypher[tag=get-largest-component]
 ----
-== Example Usage
+== Example usage
 
 == Syntax
 

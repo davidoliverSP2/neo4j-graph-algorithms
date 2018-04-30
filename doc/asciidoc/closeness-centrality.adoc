@@ -124,7 +124,7 @@ k/S| 0.4  0.57  0.67  0.57   0.4     // normalized closeness centrality
 
 
 
-== Example Usage
+== Example usage
 
 == Syntax
 
