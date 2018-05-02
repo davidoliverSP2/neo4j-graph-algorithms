@@ -2,19 +2,23 @@
 
 // tag::introduction[]
 As mentioned above, calculating the exact betweenness centrality on large graphs can be very time consuming.
-We might therefore choose to use an approximation algorithm that will run much quicker and still give us useful information.
+Therefore, you might choose to use an approximation algorithm that will run much quicker, and still provide useful information.
 // end::introduction[]
 
 == RA-Brandes algorithm
 
 // tag::explanation[]
-The RA-Brandes algorithm is the best known one for calculating an approximate score for betweenness centrality.
-Rather than calculating the shortest path between every pair of nodes, the RA-Brandes algorithm consider only a subset of nodes.
+The RA-Brandes algorithm is the best known algorithm for calculating an approximate score for betweenness centrality.
+Rather than calculating the shortest path between every pair of nodes, the RA-Brandes algorithm considers only a subset of nodes.
 Two common strategies for selecting the subset of nodes are:
 
-* random: nodes are selected uniformly at random with defined probability of selection. The default probability is `log10(N) / e^2`. If the probability is 1 then the algorithm works the same was as the normal betweenness centrality algorithm where all nodes are loaded.
+random::
+  Nodes are selected uniformly, at random, with defined probability of selection.
+  The default probability is `log10(N) / e^2`.
+  If the probability is 1, then the algorithm works the same way as the normal Betweenness Centrality algorithm, where all nodes are loaded.
 
-* degree: first calculates the mean degree of the nodes and then only visits nodes whose degree is higher then the mean. i.e. only dense nodes are visited
+degree::
+  First, the mean degree of the nodes is calculated, and then only the nodes whose degree is higher then the mean are visited (i.e. only dense nodes are visited).
 
 As a further optimisation we might choose to limit the depth used by the shortest path algorithm.
 // end::explanation[]
