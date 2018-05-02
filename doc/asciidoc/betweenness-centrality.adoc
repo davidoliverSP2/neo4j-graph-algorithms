@@ -17,7 +17,7 @@ This makes Alice important, because she ensures that no nodes are isolated.
 // tag::explanation[]
 The Betweenness Centrality algorithm calculates the shortest (weighted) path between every pair of nodes in a connected graph, using the breadth-first search algorithm.
 Each node receives a score, based on the number of these shortest paths that pass through the node.
-Nodes that most frequently lie on these shortest paths will have a higher *betweenness centrality* score.
+Nodes that most frequently lie on these shortest paths will have a higher betweenness centrality score.
 
 The algorithm was given its first formal definition by Linton Freeman, in his 1971 paper http://moreno.ss.uci.edu/23.pdf["A Set of Measures of Centrality Based on Betweenness"^].
 It was considered to be one of the "three distinct intuitive conceptions of centrality".
@@ -27,12 +27,12 @@ It was considered to be one of the "three distinct intuitive conceptions of cent
 
 // tag::use-case[]
 
-* Betweenness centrality is used to research the network flow in a package delivery process or telecommunications network.
+* Betweenness centrality is used to research the network flow in a package delivery process, or telecommunications network.
 These networks are characterized by traffic that has a known target and takes the shortest path possible.
 This, and other scenarios, are described by Stephen P. Borgatti in http://www.analytictech.com/borgatti/papers/centflow.pdf["Centrality and network flow"].
 
 * Betweenness centrality is used to identify influencers in legitimate, or criminal, organizations.
-Studies show that influencers in organizations are not necessarily in management positions but instead can be found in brokerage positions of the organizational network.
+Studies show that influencers in organizations are not necessarily in management positions, but instead can be found in brokerage positions of the organizational network.
 Removal of such influencers could seriously destabilize the organization.
 More detail can be found in http://archives.cerium.ca/IMG/pdf/Morselli_and_Roy_2008_.pdf["Brokerage qualifications in ringing operations"], by Carlo Morselli and Julie Roy.
 
@@ -103,8 +103,9 @@ include::betweenness-centrality-ra-brandes.adoc[leveloffset=3]
 == Cypher projection
 
 If label and relationship-type are not selective enough to describe your subgraph to run the algorithm on, you can use Cypher statements to load or project subsets of your graph.
-Can be also used to run algorithms on a virtual graph.
-Set `graph:'cypher'` in the config.
+This can also be used to run algorithms on a virtual graph.
+
+.Set `graph:'cypher'` in the config:
 
 [source,cypher]
 ----
@@ -132,25 +133,23 @@ We support the following versions of the betweenness centrality algorithm:
 
 `algo.betweenness()`
 
-- implementation of brandes-bc algorithm and nodePartitioning extension
-- if concurrency parameter is set (and >1) ParallelBetweennessCentrality is used
-- ParallelBC spawns N(given by the concurrency param) concurrent threads for calculation where each one
- calculates the BC for one node at a time
+* Implementation of brandes-bc algorithm and nodePartitioning extension.
+* If concurrency parameter is set (and >1), ParallelBetweennessCentrality is used.
+* ParallelBC spawns N(given by the concurrency param) concurrent threads for calculation, where each one
+ calculates the BC for one node at a time.
 
 `algo.betweenness.exp1()`
 
-- brandes-like algorithm which uses successor sets instead of predecessor sets
-- The algorithm is based on Brandes definition but with some changes
- regarding the dependency-accumulation step.
-- Does not support undirected graph
+* Brandes-like algorithm, which uses successor sets instead of predecessor sets.
+* The algorithm is based on Brandes definition, but with some changes regarding the dependency-accumulation step.
+* Does not support undirected graph
 
 `algo.betweenness.sampled()`
 
-- Calculates betweenness-dependencies on a subset of pivot nodes (instead of all nodes). Up to now 2 randomization strategies are implemented which can be set using the optional argument strategy:
-
-- random selection(default): strategy:'random': (takes optional argument probability:double(0-1) or log10(N) / e^2 as default)
-- degree based randomization: strategy:'degree': (makes dense nodes more likely)
-- optional Arguments: maxDepth:int
+* Calculates betweenness-dependencies on a subset of pivot nodes (instead of all nodes).
+2 randomization strategies are implemented, which can be set using the optional argument strategy: `random selection(default): strategy:'random':` (takes optional argument probability:double(0-1) or log10(N) / e^2 as default)
+* Degree based randomization: `strategy:'degree':` (makes dense nodes more likely)
+* Optional Arguments: `maxDepth:int`
 
 ifndef::env-docs[]
 == References
