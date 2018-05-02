@@ -1,18 +1,22 @@
 = The Harmonic Centrality algorithm
 
 // tag::introduction[]
-Harmonic centrality (also known as 'valued centrality') is a variant of closeness centrality that was invented to solve the problem the original formula had when dealing with unconnected graphs.
+Harmonic centrality (also known as valued centrality) is a variant of closeness centrality, that was invented to solve the problem the original formula had when dealing with unconnected graphs.
 As with many of the centrality algorithms, it originates from the field of social network analysis.
 // end::introduction[]
 
 == History and explanation
 
 // tag::explanation[]
-Harmonic centrality was proposed by Marchiori and Latora [1] while trying to come up with a sensible notion of "average shortest path".
-They suggested replacing the average distance calculation from the closeness centrality algorithm with the harmonic mean of all distances.
+Harmonic centrality was proposed by Marchiori and Latora while trying to come up with a sensible notion of "average shortest path".
+ifndef::env-docs[]
+[1]
+endif::env-docs[]
+
+They suggested replacing the average distance calculation from the Closeness Centrality algorithm, with the harmonic mean of all distances.
 
 The algorithm is very similar to closeness centrality, but rather than summing the distances of a node to all other nodes it sums the inverse of those distances.
-This lets it deal with infinite values.
+This enables it deal with infinite values.
 // end::explanation[]
 
 // tag::formula[]
@@ -20,11 +24,11 @@ The *raw harmonic centrality* for a node is calculated using the following formu
 
 `raw harmonic centrality(node) = sum(1 / distance from node to every other node excluding itself)`
 
-As with closeness centrality we can also calculate a *normalized harmonic centrality* with the following formula:
+As with closeness centrality, we can also calculate a *normalized harmonic centrality* with the following formula:
 
 `normalized harmonic centrality(node) = sum(1 / distance from node to every other node excluding itself) / (number of nodes - 1)`
 
-In this formula ∞ values are handled cleanly.
+In this formula, ∞ values are handled cleanly.
 // end::formula[]
 
 == Use-cases - when to use the Harmonic Centrality algorithm
@@ -36,10 +40,8 @@ For example, we might use it if we're trying to identify where in the city to pl
 If we're trying to spread a message on social media we could use the algorithm to find the key influencers that can help us achieve our goal.
 // end::use-case[]
 
-== Constraints - when not to use the Harmonic Centrality algorithm
-
 // tag::constraint[]
-
+// == Constraints - when not to use the Harmonic Centrality algorithm
 // end::constraint[]
 
 == Harmonic Centrality algorithm sample
@@ -47,21 +49,21 @@ If we're trying to spread a message on social media we could use the algorithm t
 // image::harmonic_centrality.png[]
 
 
-.Create sample graph
+.The following will create a sample graph:
 [source,cypher]
 ----
 include::scripts/harmonic-centrality.cypher[tag=create-sample-graph]
 ----
 
 
-.Running algorithm and streaming results
+.The following will run the algorithm and stream results:
 [source,cypher]
 ----
 include::scripts/harmonic-centrality.cypher[tag=stream-sample-graph]
 - yields centrality for each node
 ----
 
-.Running algorithm and writing back results
+.The following will run the algorithm and write back results:
 [source,cypher]
 ----
 include::scripts/harmonic-centrality.cypher[tag=write-sample-graph]
@@ -70,7 +72,7 @@ include::scripts/harmonic-centrality.cypher[tag=write-sample-graph]
 
 Calculation:
 
-k = N-1 = 4
+`k = N-1 = 4`
 
      A     B     C     D     E
  ---|-----------------------------
@@ -90,8 +92,7 @@ sum |1.5    2    1.5    1     1
  ---|------------------------------
  *k |0.37  0.5  0.37  0.25  0.25
 
-instead of calculating the farness we sum the inverse
-of each cell and multiply by 1/(n-1)
+Instead of calculating the farness, we sum the inverse of each cell and multiply by `1/(n-1)`.
 
 
 
