@@ -192,8 +192,9 @@ We support the following versions of the shortest path algorithms:
 == Cypher projection
 
 If label and relationship-type are not selective enough to describe your subgraph to run the algorithm on, you can use Cypher statements to load or project subsets of your graph.
-Can be also used to run algorithms on a virtual graph.
-Set `graph:'cypher'` in the config.
+This can also be used to run algorithms on a virtual graph.
+
+.Set `graph:'cypher'` in the config:
 
 [source,cypher]
 ----
@@ -204,24 +205,25 @@ include::scripts/single-shortest-path.cypher[tag=cypher-loading]
 
 `algo.shortestPath`
 
-- specify start and end node, find the shortest path between them
-- Dijkstra single source shortest path algorithm
-- there may be more then one shortest path, algo returns only one
-- if initialized with an non-existing weight-property it will treat the graph as unweighted
+* Specify start and end node, find the shortest path between them.
+* Dijkstra single source shortest path algorithm.
+* There may be more then one shortest path, algorithm returns only one.
+* If initialized with an non-existing weight-property, it will treat the graph as unweighted.
 
 `algo.shortestPath.deltaStepping`
 
-- specify start node, find the shortest paths to all other nodes
-- parallel non-negative single source shortest path algorithm for weighted graphs
-- It can be tweaked using the delta-parameter which controls the grade of concurrency.
-- if initialized with an non-existing weight-property it will treat the graph as unweighted
+* Specify start node, find the shortest paths to all other nodes.
+* Parallel non-negative single source shortest path algorithm for weighted graphs.
+* It can be tweaked using the delta-parameter which controls the grade of concurrency.
+* If initialized with an non-existing weight-property, it will treat the graph as unweighted.
 
 `algo.shortestPaths`
 
-- specify start node, find the shortest paths to all other nodes
-- Dijkstra single source shortest path algorithm
-- if initialized with an non-existing weight-property it will treat the graph as unweighted
+* Specify start node, find the shortest paths to all other nodes.
+* Dijkstra single source shortest path algorithm.
+* If initialized with an non-existing weight-property, it will treat the graph as unweighted.
 
+ifndef::env-docs[]
 == References
 
 // tag::references[]
@@ -235,7 +237,7 @@ include::scripts/single-shortest-path.cypher[tag=cypher-loading]
 
 * https://www.cc.gatech.edu/~bader/papers/ShortestPaths-ALENEX2007.pdf
 // end::references[]
-
+endif::env-docs[]
 
 ifdef::implementation[]
 // tag::implementation[]
@@ -245,7 +247,10 @@ ifdef::implementation[]
 :leveloffset: +1
 // copied from: https://github.com/neo4j-contrib/neo4j-graph-algorithms/issues/80
 
-A _Single Source Shortest Path_ algorithms calculates a path between a pair of nodes whose summed weights are minimal. A common algorithm used is Dijkstra. _All Pairs Shortest Path_ on the other hand calculates a shortest path forest containing all paths between the nodes in the graph. An algorithm to solve this is Floyd Warshall or Parallel Johnson's algorithm.
+A Single Source Shortest Path algorithm calculates a path between a pair of nodes whose summed weights are minimal.
+A common algorithm used is Dijkstra.
+On the other hand, All Pairs Shortest Path calculates a shortest path forest containing all paths between the nodes in the graph.
+An algorithm to solve this is Floyd Warshall or Parallel Johnson's algorithm.
 
 ## Progress
 
