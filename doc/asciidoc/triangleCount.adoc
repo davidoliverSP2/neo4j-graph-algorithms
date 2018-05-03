@@ -56,7 +56,7 @@ image::triangle_count.png[]
 include::scripts/triangle-count.cypher[tag=create-sample-graph]
 ----
 
-.The following will return a stream of triples, with `nodeId`s for each triangle:
+.The following will return a stream of triples, with `nodeId` for each triangle:
 [source,cypher]
 ----
 include::scripts/triangle-count.cypher[tag=stream-triples]
@@ -129,7 +129,7 @@ Local triangle count and clustering coefficient of nodes can be used as features
 
 == Syntax
 
-.The following will return a stream of triples with `nodeId`s for each triangle:
+.The following will return a stream of triples with `nodeId` for each triangle:
 [source,cypher]
 ----
 CALL algo.triangle.stream(label:String, relationship:String, {concurrency:4})
