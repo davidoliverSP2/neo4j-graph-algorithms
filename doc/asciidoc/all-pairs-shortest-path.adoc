@@ -2,7 +2,7 @@
 
 // tag::introduction[]
 The All Pairs Shortest Path (APSP) calculates the shortest (weighted) path between all pairs of nodes.
-This algorithm has optimisations that make it quicker than calling the SSSP algorithm for every pair of nodes in the graph.
+This algorithm has optimisations that make it quicker than calling the Single Source Shortest Path algorithm for every pair of nodes in the graph.
 
 // end::introduction[]
 
@@ -81,9 +81,9 @@ Undirected graph can be represented as https://en.wikipedia.org/wiki/Bidirected_
 
 We do not have to save this reversed relationship, we can project it using *Cypher loading*.
 Note that relationship query does not specify direction of the relationship.
-This is applicable to all other algorithms that use *Cypher loading*.
+This is applicable to all other algorithms that use Cypher loading.
 
-.The following will run the all pairs shortest path, treating the graph as undirected:
+.The following will run the algorithm, treating the graph as undirected:
 [source,cypher]
 ----
 include::scripts/single-shortest-path.cypher[tag=all-pairs-bidirected-graph]
