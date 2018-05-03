@@ -1,20 +1,19 @@
 = The Single Source Shortest Path algorithm
 
 // tag::introduction[]
-The _Single Source Shortest Path_ (SSSP) algorithm calculates the shortest (weighted) path between a pair of nodes.
-Dijkstra's algorithm is the most well known one in this category.
-SSSP is a real time graph algorithm and can be used as part of the normal user flow in a web or mobile application.
+The Single Source Shortest Path (SSSP) algorithm calculates the shortest (weighted) path between a pair of nodes.
+In this category, Dijkstra's algorithm is the most well known.
+SSSP is a real time graph algorithm, and can be used as part of the normal user flow in a web or mobile application.
 // end::introduction[]
 
 == History and explanation
 
 // tag::explanation[]
-Path finding has a long history and is considered to be one of the classical graph problems - it has been researched as far back as the 19th century.
-It gained prominence in the early 1950s in the context of ‘alternate routing’
-i.e. finding a second shortest route if the shortest route is blocked.
+Path finding has a long history, and is considered to be one of the classical graph problems; it has been researched as far back as the 19th century.
+It gained prominence in the early 1950s in the context of ‘alternate routing’, i.e. finding a second shortest route if the shortest route is blocked.
 
 Dijkstra came up with his algorithm in 1956 while trying to come up with something to show off the new ARMAC computers.
-He needed to find a problem and solution that people not familiar with computing would be able to understand and designed what is now known as Dijkstra's algorithm.
+He needed to find a problem and solution that people not familiar with computing would be able to understand, and designed what is now known as Dijkstra's algorithm.
 He later implemented it for a slightly simplified transportation map of 64 cities in the Netherlands.
 // end::explanation[]
 
@@ -22,10 +21,10 @@ He later implemented it for a slightly simplified transportation map of 64 citie
 
 // tag::use-case[]
 * Finding directions between physical locations.
-This is the most common usage, and web mapping tools such as MapQuest and Google Maps use the shortest path algorithm or a variant of it to provide driving directions.
+This is the most common usage, and web mapping tools such as MapQuest and Google Maps use the shortest path algorithm, or a variant of it, to provide driving directions.
 
 * Social networks can use the algorithm to find the degrees of separation between people.
-For example, when you view someone's profile on LinkedIn it will indicate how many people separate you in the connections graph as well as listing your mutual connections.
+For example, when you view someone's profile on LinkedIn, it will indicate how many people separate you in the connections graph, as well as listing your mutual connections.
 
 * https://en.wikipedia.org/wiki/Open_Shortest_Path_First[Open Shortest Path First^] is a routing protocol for IP networks.
 It uses Dijkstra's algorithm to help detect changes in topology, such as link failures, and https://routing-bits.com/2009/08/06/ospf-convergence/[come up with a new routing structure in seconds^].
