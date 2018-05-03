@@ -56,7 +56,7 @@ image::triangle_count.png[]
 include::scripts/triangle-count.cypher[tag=create-sample-graph]
 ----
 
-.The following will return a stream of triples, with nodeIds for each triangle:
+.The following will return a stream of triples, with `nodeId`s for each triangle:
 [source,cypher]
 ----
 include::scripts/triangle-count.cypher[tag=stream-triples]
@@ -84,7 +84,7 @@ This means that everybody in the triangle knows each other.
 include::scripts/triangle-count.cypher[tag=triangle-write-sample-graph]
 ----
 
-.The following will count the number of triangles that a node is member of, and return a stream with nodeId and triangleCount:
+.The following will count the number of triangles that a node is member of, and return a stream with `nodeId` and `triangleCount`:
 [source,cypher]
 ----
 include::scripts/triangle-count.cypher[tag=triangle-stream-sample-graph]
@@ -129,7 +129,7 @@ Local triangle count and clustering coefficient of nodes can be used as features
 
 == Syntax
 
-.The following will return a stream of triples with nodeIds for each triangle:
+.The following will return a stream of triples with `nodeId`s for each triangle:
 [source,cypher]
 ----
 CALL algo.triangle.stream(label:String, relationship:String, {concurrency:4})
@@ -156,7 +156,7 @@ YIELD nodeA, nodeB, nodeC - yield nodeA, nodeB and nodeC which form a triangle
 | nodeC | int | The ID of node in the given triangle
 |===
 
-.The following will count the number of triangles that a node is a member of, and return a stream with nodeId and triangleCount:
+.The following will count the number of triangles that a node is a member of, and return a stream with `nodeId` and `triangleCount`:
 [source,cypher]
 ----
 CALL algo.triangleCount.stream(label:String, relationship:String, {concurrency:4})
