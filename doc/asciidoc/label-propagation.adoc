@@ -114,7 +114,7 @@ Using this preliminary set of labels (identifiers), it then sequentially updates
 include::scripts/label-propagation.cypher[tag=write-existing-label-sample-graph]
 ----
 
-== Example usage
+// == Example usage
 
 == Syntax
 
