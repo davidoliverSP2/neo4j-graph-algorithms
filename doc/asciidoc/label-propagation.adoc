@@ -91,7 +91,8 @@ include::scripts/label-propagation.cypher[tag=write-sample-graph]
 
 // tag::stream-sample-graph-explanation[]
 Our algorithm found two communities, with 3 members each.
-Visually it seems clear that Michael, Bridget, and Alice belong together, as do Doug and Mark.
+
+It appears that Michael, Bridget, and Alice belong together, as do Doug and Mark.
 Only Charles doesn't strongly fit into either side, but ends up with Doug and Mark.
 // end::stream-sample-graph-explanation[]
 
