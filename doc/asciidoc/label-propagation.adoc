@@ -192,7 +192,7 @@ YIELD nodeId, label
 If label and relationship-type are not selective enough to describe your subgraph to run the algorithm on, you can use Cypher statements to load or project subsets of your graph.
 This can also be used to run algorithms on a virtual graph.
 
-.Set graph:'cypher' in the config:
+.Set `graph:'cypher'` in the config:
 
 [source,cypher]
 ----
