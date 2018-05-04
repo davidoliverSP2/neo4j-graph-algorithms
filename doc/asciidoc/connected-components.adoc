@@ -259,8 +259,7 @@ As long as there are more elements on the queue, the algorithm takes two, merges
 
 `algo.unionFind.forkJoinMerge`
 
-* Like in *exp1* the resulting `DisjointSetStruct` of each node-partition is merged by the `ForkJoin` pool, while
-the calculation of the `DisjointSetStruct` is done by the `ExecutorService`.
+* Like in `algo.unionFind.queue`, the resulting `DisjointSetStruct` of each node-partition is merged by the `ForkJoin` pool, while the calculation of the `DisjointSetStruct` is done by the `ExecutorService`.
 
 `algo.unionFind.forkJoin`
 
