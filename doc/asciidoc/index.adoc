@@ -6,6 +6,8 @@
 :toclevels: 2
 :env-docs: true
 
+License: link:{common-license-page-uri}[Creative Commons 4.0]
+
 [abstract]
 --
 This is the user guide for Neo4j Graph Algorithms version {docs-version}, authored by the Neo4j Team.
