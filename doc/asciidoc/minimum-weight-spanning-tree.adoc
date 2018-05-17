@@ -242,7 +242,7 @@ YIELD loadMillis, computeMillis, writeMillis, effectiveNodeCount
 
 == Graph type support
 
-We support the following versions of the Minimum Weight Spanning Tree algorithm:
+The Minimum Weight Spanning Tree algorithm supports the following graph type:
 
 * [x] undirected, weighted
 

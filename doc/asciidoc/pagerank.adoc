@@ -238,7 +238,7 @@ include::scripts/pagerank.cypher[tag=cypher-loading]
 
 == Graph type support
 
-We support the following versions of the PageRank algorithm:
+The PageRank algorithm supports the following graph types:
 
 * [x] directed, unweighted
 
