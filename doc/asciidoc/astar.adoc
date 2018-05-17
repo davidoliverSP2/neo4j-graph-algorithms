@@ -117,7 +117,7 @@ include::scripts/astar.cypher[tag=cypher-loading]
 ----
 
 
-== Versions
+== Graph type support
 
 We support the following versions of the shortest path algorithms:
 

@@ -213,7 +213,7 @@ include::scripts/label-propagation.cypher[tag=cypher-loading]
 ----
 
 
-== Versions
+== Graph type support
 
 We support the following versions of the Label Propagation algorithm:
 

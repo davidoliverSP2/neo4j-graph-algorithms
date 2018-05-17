@@ -221,7 +221,7 @@ include::scripts/louvain.cypher[tag=cypher-loading]
 ----
 
 
-== Versions
+== Graph type support
 
 * [x] undirected, unweighted
 ** weightProperty: null

@@ -240,7 +240,7 @@ YIELD loadMillis, computeMillis, writeMillis, effectiveNodeCount
 |===
 
 
-== Versions
+== Graph type support
 
 We support the following versions of the Minimum Weight Spanning Tree algorithm:
 

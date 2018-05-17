@@ -154,7 +154,7 @@ YIELD nodeId, cost
 |===
 
 
-== Versions
+== Graph type support
 
 We support the following versions of the shortest path algorithms:
 

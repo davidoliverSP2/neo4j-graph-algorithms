@@ -168,7 +168,7 @@ CALL algo.shortestPath.stream(startNode:Node, endNode:Node, weightProperty:Strin
 |===
 
 
-== Versions
+== Graph type support
 
 We support the following versions of the shortest path algorithms:
 
