@@ -63,7 +63,7 @@ The constraints of <<algorithms-pagerank-limitations,PageRank>> also apply to Ra
 // end::constraint[]
 
 
-[[algorithms-pagerank-sample]]
+[[algorithms-random-walk-sample]]
 == Random Walk algorithm sample
 
 This sample will explain the Random Walk algorithm, using a simple graph:
@@ -99,7 +99,7 @@ include::scripts/random-walk.cypher[tag=stream-sample-graph]
 // end::stream-sample-graph-explanation[]
 
 
-[[algorithms-pagerank-syntax]]
+[[algorithms-random-walk-syntax]]
 == Syntax
 
 .The following will run the algorithm and stream results:
