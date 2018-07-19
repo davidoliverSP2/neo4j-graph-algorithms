@@ -36,8 +36,10 @@ It's only in the last couple of decades, however, that researchers have studied 
 Random Walk is often used as part of other algorithms:
 
 * It can be used as part of the *node2vec* and *graph2vec* algorithms, that create node embeddings.
+
 * It can be used as part of the *Walktrap* and *Infomap community detection* algorithms.
   If a random walk returns a small set of nodes repeatedly, then it indicates that those set of nodes may have a community structure.
+
 * It can be used as part of the training process of machine learning model, as described in David Mack's article https://medium.com/octavian-ai/review-prediction-with-neo4j-and-tensorflow-1cd33996632a[Review prediction with Neo4j and TensorFlow^].
 
 You can read about more use cases in https://arxiv.org/pdf/1612.03281.pdf[Random walks and diffusion on networks^].
@@ -56,8 +58,10 @@ The constraints of <<algorithms-pagerank-limitations,PageRank>> also apply to Ra
 * Dead-ends occur when pages have no out-links.
   In this case, the random walk will abort and a path containing only the first first node will be returned.
   This problem can be avoided by passing the `direction: BOTH` parameter, so that the random walk will traverse relationships in both directions
+
 * If there are no links from within a group of pages to outside of the group, then the group is considered a spider trap.
   Random walks starting from any of the nodes in that group will only traverse to the others in the group - our implementation of the algorithm doesn't allow a random walk to jump to non-neighbouring nodes.
+  
 * Sinks can occur when a network of links form an infinite cycle.
 
 // end::constraint[]
