@@ -183,8 +183,6 @@ ifdef::implementation[]
 
 :leveloffset: +1
 
-Random Walk is the popular search algorithm developed by Google.
-
 For more information, see the https://en.wikipedia.org/wiki/Random_walk[Random Walk page on Wikipedia].
 
 ## Progress
