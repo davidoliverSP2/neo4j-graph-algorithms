@@ -17,7 +17,16 @@ Releases are available here: https://github.com/neo4j-contrib/neo4j-graph-algori
 == Algorithms
 
 // tag::algorithms[]
+Graph algorithms are used to compute metrics for graphs, nodes, or relationships.
 
+They can provide insights on relevant entities in the graph (centralities, ranking), or inherent structures like communities (community-detection, graph-partitioning, clustering).
+
+Many graph algorithms are iterative approaches that frequently traverse the graph for the computation using random walks, breadth-first or depth-first searches, or pattern matching.
+
+Due to the exponential growth of possible paths with increasing distance, many of the approaches also have high algorithmic complexity.
+
+Fortunately, optimized algorithms exist that utilize certain structures of the graph, memoize already explored parts, and parallelize operations.
+Whenever possible, we've applied these optimizations.
 
 === Centralities
 
