@@ -26,6 +26,7 @@ This section includes:
 * <<algorithms-pagerank-syntax, Syntax>>
 * <<algorithms-pagerank-support, Graph type support>>
 
+
 [[algorithms-pagerank-context]]
 == History and explanation
 
