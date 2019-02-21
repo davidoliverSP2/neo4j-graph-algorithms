@@ -24,6 +24,7 @@ This section includes:
 * <<algorithms-shortest-path-support, Graph type support>>
 * <<algorithms-shortest-path-imp, Implementations>>
 
+
 [[algorithms-shortest-path-context]]
 == History and explanation
 
